@@ -1,9 +1,8 @@
 type Query {
-  test(
-    number: Int = 30
-  ): [Test!]!
+  test(number: Int = 20000): [Test!]!
 }
 
 type Test {
-  value: String!
+  standardResolver: String
+  decoratorResolver: String!
 }

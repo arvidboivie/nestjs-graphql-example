@@ -10,5 +10,6 @@ export abstract class IQuery {
 }
 
 export class Test {
-    value: string;
+    standardResolver?: string;
+    decoratorResolver: string;
 }
