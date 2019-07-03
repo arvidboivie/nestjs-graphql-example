@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-typings": "ts-node generate-typings",
+    "build": "tsc -p tsconfig.build.json && tscpaths -p tsconfig.json -s ./src -o ./dist && copyfiles --error -u 1 \"./src/**/*.graphql\" ./dist",
+    "exec": "export $(cat .env | xargs) && node --inspect dist/main.js",
+    "start:dev": "nodemon"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.0.0",
+    "@nestjs/core": "^6.0.0",
+    "@nestjs/graphql": "^6.2.4",
+    "@nestjs/platform-express": "^6.4.0",
+    "@nestjs/platform-fastify": "^6.4.0",
+    "apollo-server-express": "^2.6.7",
+    "class-transformer": "^0.2.3",
+    "graphql": "^14.4.1",
+    "graphql-tools": "^4.0.5",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "nodemon": "^1.19.1",
+    "tscpaths": "^0.0.9"
+  }
+}

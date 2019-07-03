@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts, graphql",
+  "ignore": ["src/graphql.schema.ts"],
+  "exec": "yarn generate-typings && export $(cat .env | xargs) && ts-node src/main.ts"
+}

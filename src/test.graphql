@@ -1,0 +1,9 @@
+type Query {
+  test(
+    number: Int = 30
+  ): [Test!]!
+}
+
+type Test {
+  value: String!
+}
