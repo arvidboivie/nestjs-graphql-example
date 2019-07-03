@@ -1,0 +1,34 @@
+// field resolvers without decorators
+
+query{
+ test(number: 20000) {
+     alias1: standardResolver
+     alias2: standardResolver
+     alias3: standardResolver
+     alias4: standardResolver
+     alias5: standardResolver
+     alias6: standardResolver
+     alias7: standardResolver
+     alias8: standardResolver
+     alias9: standardResolver
+     alias10: standardResolver
+ }
+ }
+
+
+ // field resolvers with decorators
+
+ query{
+ test(number: 20000) {
+     alias1: decoratorResolver
+     alias2: decoratorResolver
+     alias3: decoratorResolver
+     alias4: decoratorResolver
+     alias5: decoratorResolver
+     alias6: decoratorResolver
+     alias7: decoratorResolver
+     alias8: decoratorResolver
+     alias9: decoratorResolver
+     alias10: decoratorResolver
+ }
+ }
